@@ -7,16 +7,26 @@ class LensKart{
            String productColor;
            String productType;
            int warranty;
+		   
+		   
+	public LensKart(){
 		
-		 public LensKart(String name,String itemName,int itemID,String itemColor,String itemType,int max){
-			 
-			 companyName=name;
-			 productName=itemName;
-			 productID=itemID;
-			 productColor=itemColor;
-			 productType=itemType;
-			 warranty=max;
-			                  System.out.println("Object is created:");
+		System.out.println("Default constructor invoked");
+		
+		
+	}
+		   
+		
+		 public LensKart(String companyName,String productName,int productID,String productColor,String productType,int warranty){
+			 this();
+			 this.companyName=companyName;
+			 this.productName=productName;
+			 this.productID=productID;
+			 this.productColor=productColor;
+			 this.productType=productType;
+			 this.warranty=warranty;
+			                  
+			System.out.println("Object is created:");
 
 			 
 			
@@ -25,12 +35,12 @@ class LensKart{
 
                  System.out.println("Enjoy our product!:");
 				 
-				 System.out.println("Name of the company: "+companyName);
-					System.out.println("Product Name: "+productName);
-					System.out.println("Product ID: "+productID);
-					System.out.println("Product colour: "+productColor);
-						System.out.println("Product type: "+productType);
-							System.out.println("Warranty for the product: "+warranty+"year");
+				 System.out.println("Name of the company: "+this.companyName);
+					System.out.println("Product Name: "+this.productName);
+					System.out.println("Product ID: "+this.productID);
+					System.out.println("Product colour: "+this.productColor);
+						System.out.println("Product type: "+this.productType);
+							System.out.println("Warranty for the product: "+this.warranty+"year");
 									System.out.println("-------------------------------------------");
 
 
