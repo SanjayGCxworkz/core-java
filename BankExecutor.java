@@ -24,13 +24,13 @@ class BankExecutor{
 		
 		
 		bank.setBranchCode(31425);
-		System.out.println("Bank code: "+ bank.getBranchCode());
+		System.out.println("Branch code: "+ bank.getBranchCode());
 		
 		
 		
 		
 		bank.setBranchName("Arsinakunte");
-		System.out.println("bank gender  : "+ bank.getBranchName());
+		System.out.println("Branch name  : "+ bank.getBranchName());
 		
 				System.out.println("Main ended");
 
