@@ -1,0 +1,2 @@
+class Virat extends Cricketer{
+}

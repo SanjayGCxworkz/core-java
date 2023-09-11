@@ -1,0 +1,2 @@
+class Rubix extends CombinationalPuzzle{
+}

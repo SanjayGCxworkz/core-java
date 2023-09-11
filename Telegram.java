@@ -1,0 +1,6 @@
+class Telegram extends SocialMedia{
+
+
+
+
+}

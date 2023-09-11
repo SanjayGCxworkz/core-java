@@ -1,0 +1,2 @@
+class IrSensor extends ElectronicProduct{
+}

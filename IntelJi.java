@@ -1,0 +1,3 @@
+class IntelJi extends IDE{
+
+}

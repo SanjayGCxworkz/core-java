@@ -1,0 +1,2 @@
+class Google extends BestCompany{
+}

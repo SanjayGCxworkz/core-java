@@ -1,41 +1,13 @@
 class BankExecutor{
 
-
-	public static void main(String arg[]){
+	public static void main(String ban[]){
 	
-	
-		System.out.println("Main Started");
-		
-		Bank bank=new Bank();
-		
-		bank.setIfscCode(1);
-		System.out.println("Bank IFSC code: "+ bank.getIfscCode());
-		
-		
-		
-		bank.setBankName("Canara Bank");
-		System.out.println("Bank name : "+ bank.getBankName());
-		
-		
-		
-		bank.setAddress("Adharshanagar");
-		System.out.println("Location  : "+ bank.getAddress());
-		
-		
-		
-		bank.setBranchCode(31425);
-		System.out.println("Bank code: "+ bank.getBranchCode());
-		
-		
-		
-		
-		bank.setBranchName("Arsinakunte");
-		System.out.println("bank gender  : "+ bank.getBranchName());
-		
-				System.out.println("Main ended");
+		SbiBank sbi =new  SbiBank();//object created
+		sbi.getAccount(1823,"gsha3843");//calling method with passing argument
 
-			
 	}
+
+
 
 
 

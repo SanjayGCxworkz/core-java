@@ -1,0 +1,3 @@
+class Vivo extends Mobile{
+
+}
