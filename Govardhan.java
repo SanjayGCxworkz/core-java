@@ -1,2 +1,0 @@
-class Govardhan extends Theater{
-}

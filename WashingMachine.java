@@ -1,3 +1,0 @@
-class WashingMachine extends ElectronicDevice{
-
-}

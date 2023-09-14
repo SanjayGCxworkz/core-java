@@ -1,3 +1,0 @@
-class Garuda extends Mall{
-
-}

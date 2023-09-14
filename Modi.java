@@ -1,2 +1,0 @@
-class Modi extends PrimeMinister{
-}

@@ -1,3 +1,0 @@
-class JavaLanguage extends ProgrammingLanguage{
-
-}

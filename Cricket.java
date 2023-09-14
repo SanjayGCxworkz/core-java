@@ -1,2 +1,0 @@
-class Cricket extends Sports{
-}
