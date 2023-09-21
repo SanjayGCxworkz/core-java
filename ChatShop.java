@@ -73,6 +73,67 @@ int index;
 		
 		
 	}
+	
+	
+	
+	
+	public String searchChats(String thindi){
+		
+		String item=null;
+		
+		for(int num=0;num<chatNames.length;num++){
+			
+			if(chatNames[num]==thindi){
+				
+				item=chatNames[num];
+				
+			}
+			
+			
+		}
+		
+		
+		return item;
+		
+	}
+	
+	
+	
+	public boolean deleteByChatsName(String chatsName){
+		
+		boolean isDeleted=false;
+		
+		int index=0;
+		String chatsAfterDeleted[]=new String[chatNames.length-1];
+		
+		
+		System.out.println("----------------------");
+		System.out.println("The avaiable chats are:   ");
+		
+		for(int num=0;num<chatNames.length;num++){
+			
+			if(chatNames[num]!=chatsName){
+				
+				chatsAfterDeleted[index++]=chatNames[num];
+				isDeleted=true;
+			}
+			else{
+				
+				System.out.println(chatsName+" is deleted");
+			}
+			
+		}
+		for(int num=0;num<chatsAfterDeleted.length;num++){
+			
+			int result=num+1;
+			System.out.println("No."+result+":  "+chatsAfterDeleted[num]);
+			
+			
+		}
+		
+		return isDeleted;
+		
+	}
 
 
 

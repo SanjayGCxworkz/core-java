@@ -1,7 +1,7 @@
 class HotelTester{
 	public static void main(String hots[]){
 
-		Hotel hot = new Hotel();
+		HotelShriKrishna hot = new HotelShriKrishna();
 		hot.addMenu("peri peri plate");
 		hot.addMenu("Lassi");
 		hot.addMenu("Juice");
@@ -17,6 +17,14 @@ class HotelTester{
 		
 		hot.getMenu();
 		hot.addMenu("Pizza");
+		
+		
+		String section=hot.searchInList("Juice");
+		System.out.println("Here is your list: "+section);
+		
+		
+		boolean deleted=hot.deleteByMenuName("Burger");
+		
 
 	}
 }

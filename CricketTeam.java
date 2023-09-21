@@ -74,6 +74,66 @@ class CricketTeam{
 		
 		
 	}
+	
+	
+	
+	public String searchForPlayer(String player){
+		
+		String nimmaPlayer=null;
+		
+		for(int num=0;num<playersName.length;num++){
+			
+			if(playersName[num]==player){
+				
+				nimmaPlayer=playersName[num];
+				
+			}
+			
+			
+		}
+		
+		
+		return nimmaPlayer;
+		
+	}
+	
+	
+	
+	public boolean deleteByPlayerName(String plyName){
+		
+		boolean isDeleted=false;
+		
+		int index=0;
+		String teamAfterDeleted[]=new String[playersName.length-1];
+		
+		
+		
+		for(int num=0;num<playersName.length;num++){
+			
+			if(playersName[num]!=plyName){
+				
+				teamAfterDeleted[index++]=playersName[num];
+				isDeleted=true;
+			}
+			else{
+				
+				System.out.println("Eleminated player:"+plyName);
+			}
+		}
+		System.out.println("----------------------");
+		System.out.println("The players are:   ");
+		for(int num=0;num<teamAfterDeleted.length;num++){
+			
+			
+			System.out.println(teamAfterDeleted[num]);
+			
+			
+		}
+		
+		return isDeleted;
+		
+	}
+	
 
 
 }

@@ -1,0 +1,3 @@
+class AmazonPrime extends OttPlatforms{
+
+}

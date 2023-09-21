@@ -65,6 +65,68 @@ int index;
 		
 		
 	}
+	
+	
+	public String searchMusic(String nimmaMusic){
+		
+		String gana=null;
+		for(int num=0;num<musics.length;num++){
+			
+			if(musics[num]==nimmaMusic){
+				
+				gana=musics[num];
+				
+				
+			}
+			
+		}
+		return gana;
+		
+	}
+	
+	
+	
+	public boolean deleteByMusicName(String ganaName){
+		
+		boolean isDeleted=false;
+		String musicNamesAfterDelete[]=new String[musics.length-1];
+		int ind=0;
+		
+		
+		for(int num=0;num<musics.length;num++){
+			
+			if(musics[num]!=ganaName){
+				
+				musicNamesAfterDelete[ind++]=musics[num];
+				isDeleted=true;
+				
+				
+				
+				
+			}
+			else{
+				
+				System.out.println("Deleted music:    "+ganaName);
+			}
+			
+			
+		}
+		
+		
+		System.out.println("-------------");
+		System.out.println("music names after deleted");
+		for(int num=0;num<musicNamesAfterDelete.length;num++){
+			
+			System.out.println(musicNamesAfterDelete[num]);
+			
+		}
+		
+		
+		return isDeleted;
+		
+		
+	}
+	
 
 
 }

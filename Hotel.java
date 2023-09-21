@@ -39,8 +39,10 @@ int index;
 	public void getMenu(){
 
 		System.out.println("New menu added are :");
+		
 		for(index = 0 ; index<menus.length ; index++){
-			System.out.println("                       "+menus[index]);
+			int result=index+1;
+			System.out.println("No."+result+":  "+menus[index]);
 		}		
 	}
 	
@@ -62,6 +64,63 @@ int index;
 		
 	}
 	
+	
+	
+	public String searchInList(String list){
+	
+	
+		String group=null;
+		
+		for(int num=0;num<menus.length;num++){
+			
+			if(menus[num]==list){
+				
+				group=menus[num];
+			}
+			
+			
+			
+		}
+	
+	return group;
+	
+	}
+	
+	public boolean deleteByMenuName(String menuName){
+		
+		boolean isDeleted=false;
+		
+		int index=0;
+		String menusAfterDeleted[]=new String[menus.length-1];
+		
+		
+		System.out.println("----------------------");
+		System.out.println("The avaiable menu are:   ");
+		
+		for(int num=0;num<menus.length;num++){
+			//peri-peri!=Burger
+			if(menus[num]!=menuName){
+				
+				menusAfterDeleted[index++]=menus[num];
+				isDeleted=true;
+			}
+			else{
+				
+				System.out.println(menuName+" is deleted");
+			}
+			
+		}
+		for(int num=0;num<menusAfterDeleted.length;num++){
+			
+			int result=num+1;
+			System.out.println("No."+result+":  "+menusAfterDeleted[num]);
+			
+			
+		}
+		
+		return isDeleted;
+		
+	}
 	
 	
 

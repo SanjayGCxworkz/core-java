@@ -74,6 +74,81 @@ int index;
 	}
 	
 	
+	public String searchMovie(String cinema){
+		
+		String picture=null;
+		
+		for(int num=0; num<movieNames.length;num++){
+			
+			if(movieNames[num]==cinema){
+				
+				picture=movieNames[num];
+				
+				
+			}
+			
+			
+		}
+		return picture;
+		
+		
+		
+		
+	}
+	
+	
+	public boolean deleteByName(String cinema){
+		
+		boolean isDeleted=false;
+		String movieNamesAfterDelete[]=new String[movieNames.length-1];
+		int ind=0;
+		
+		
+		for(int num=0;num<movieNames.length;num++){
+			
+			if(movieNames[num]!=cinema){
+				
+				movieNamesAfterDelete[ind++]=movieNames[num];
+				isDeleted=true;
+				
+				
+				
+				
+			}
+			else{
+				
+				System.out.println("Deleted movie:    "+cinema);
+			}
+			
+			
+		}
+		
+		
+		System.out.println("-------------");
+		System.out.println("Movies names after deleted");
+		for(int num=0;num<movieNamesAfterDelete.length;num++){
+			
+			System.out.println(movieNamesAfterDelete[num]);
+			
+		}
+		
+		
+		return isDeleted;
+		
+		
+	}
+	
+	
+	
+	
+		
+		
+	
+	
+	
+
+	
+	
 
 
 }

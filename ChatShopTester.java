@@ -18,8 +18,11 @@ class ChatShopTester{
 
 		chatShop.getNames();
 		chatShop.addNames("egg");
+		
+		String item=chatShop.searchChats("Gobi");
+		System.out.println("Thankyou for your order: "+item);
 	
-	
+		chatShop.deleteByChatsName("noodels");
 	
 	}
 

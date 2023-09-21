@@ -1,7 +1,7 @@
 class OttPlatFormsTester{
     public static void main(String arra[]){
 	
-		OttPlatforms ott = new OttPlatforms();
+		AmazonPrime ott = new AmazonPrime();
 		ott.addMovies("Ranavikrama");
 		ott.addMovies("Vamshi");
 		ott.addMovies("Vamshi");
@@ -11,7 +11,12 @@ class OttPlatFormsTester{
 	
 		ott.getMovieNames();
 		ott.addMovies("Yare kugadale");
+		
+		
+		String movieName=ott.searchMovie("Appu");
+		System.out.println("Here is your film "+movieName);
 
+		ott.deleteByName("Vamshi");
 		
 	
 	}

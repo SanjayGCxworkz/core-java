@@ -1,0 +1,2 @@
+class DhobiChatShop extends ChatShop{
+}
