@@ -1,2 +1,0 @@
-class HotelShriKrishna extends Hotel{
-}
