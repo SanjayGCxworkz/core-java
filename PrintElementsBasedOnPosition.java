@@ -23,7 +23,7 @@ public class PrintElementsBasedOnPosition{
             System.out.print(numbersArray[num]+" ");
         }
 
-        System.out.println("Elements in even position");
+        System.out.println("Elements in even position:");
         for (int num=1;num<numbersArray.length;num=num+2){
             System.out.print(numbersArray[num]+" ");
         }
