@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class StringExecutor {
 
     public static void firstOutput(String name1,String name2){
-        char[] ch=name1.toCharArray();
-        char[] ch1=name2.toCharArray();
+        char[] ch=name1.toLowerCase().toCharArray();
+        char[] ch1=name2.toUpperCase().toCharArray();
 
         for (int i = 0; i < ch1.length; i++) {
             if (ch1[i]==' ') {
@@ -22,8 +22,8 @@ public class StringExecutor {
     }
 
     public static void secondOutput(String name1,String name2){
-        char[] ch=name1.toCharArray();
-        char[] ch1=name2.toCharArray();
+        char[] ch=name1.toLowerCase().toCharArray();
+        char[] ch1=name2.toUpperCase().toCharArray();
         for (int i = 0; i < ch1.length; i++) {
             if (ch1[i]==' ') {
                 ch1[i+1]=ch[i+1];
@@ -38,8 +38,8 @@ public class StringExecutor {
     }
 
     public static void thirdOutput(String name1,String name2){
-        char[] ch=name1.toCharArray();
-        char[] ch1=name2.toCharArray();
+        char[] ch=name1.toLowerCase().toCharArray();
+        char[] ch1=name2.toUpperCase().toCharArray();
         for (int i = 0; i < ch1.length; i=i+2) {
             ch[i]=ch1[i];
         }
@@ -58,8 +58,6 @@ public class StringExecutor {
         System.out.println("original string: "+ name);
         String name1=" "+name;
         String name2=" "+name;
-        name1= name1.toLowerCase();
-        name2=name2.toUpperCase();
         firstOutput(name1,name2);
         secondOutput(name1,name2);
         thirdOutput(name1,name2);
