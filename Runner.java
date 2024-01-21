@@ -1,63 +1,73 @@
-package com.xworkz.wildlife;
+package com.xworkz;
 
-import com.xworkz.wildlife.service.AnimalService;
-import com.xworkz.wildlife.service.WildlifeService;
+import com.xworkz.dto.ProductDetails;
+import com.xworkz.service.ProductService;
+import com.xworkz.service.ProductServiceImpl;
 
 import java.util.Scanner;
 
 public class Runner {
     static Scanner sc=new Scanner(System.in);
-    static WildlifeService wildlifeService=new AnimalService();
-    public static void takingInput(){
-        System.out.println("enter the animal name.");
-        String name=sc.next();
-        System.out.println("enter animal age.");
-        int age= sc.nextInt();
-        System.out.println("enter animal weight.");
-        int weight= sc.nextInt();
-        wildlifeService.validateAndInsert(name,age,weight);
-
+    static ProductService productService=new ProductServiceImpl();
+    public static void data(){
+        System.out.println("enter product name: ");
+        String name= sc.next();
+        System.out.println("enter company name: ");
+        String company= sc.next();
+        System.out.println("enter price: ");
+        double price=sc.nextDouble();
+        System.out.println("enter manufacture data: ");
+        String mData=sc.next();
+        System.out.println("enter expiry data: ");
+        String exDate=sc.next();
+        productService.insertMethod(new ProductDetails(name,company,mData,exDate,price));
     }
 
-   static int option=0;
-    static String op=null;
     public static void main(String[] args) {
-
+        int option;
+        String again;
         do {
-            System.out.println("to insert data enter 1.");
-            System.out.println("to get all animals details enter 2.");
-            System.out.println("to get animal details by name enter 3.");
-            System.out.println("to delete animal details by name enter 4.");
-            System.out.println("to update animal age by name enter 5.");
-            option=sc.nextInt();
-
-            switch (option){
-                case 1: takingInput();
+            System.out.println("press 1 to insert data to db");
+            System.out.println("press 2 to get All Products Details");
+            System.out.println("press 3 to get Product Details By Name");
+            System.out.println("press 4 to get product details by id");
+            System.out.println("press 5 to delete product by name");
+            System.out.println("press 6 to delete product by id");
+            System.out.println("press 7 to update company name by product name");
+            option= sc.nextInt();
+            switch(option){
+                case 1:data();
                     break;
-                case 2:wildlifeService.getAllAnimalsDetails();
-                break;
+                case 2: productService.getAllProducts();
+                    break;
                 case 3:
-                    System.out.println("enter animal name.");
-                    wildlifeService.getAnimalDetailsByName(sc.next());
+                    System.out.println("enter product name to get its details.");
+                    productService.getProductDetailsByName(sc.next());
                     break;
                 case 4:
-                    System.out.println("enter animal name to delete");
-                    wildlifeService.validateAndDelete(sc.next());
+                    System.out.println("enter product id to get its details.");
+                    productService.getProductDetailsById(sc.nextInt());
                     break;
                 case 5:
-                    System.out.println("enter name and age to update");
-                    wildlifeService.validateAndUpdate(sc.next(), sc.nextInt());
+                    System.out.println("enter product name to delete its details.");
+                    productService.deleteByName(sc.next());
+                    break;
+                case 6:
+                    System.out.println("enter product id to delete its details");
+                    productService.deleteById(sc.nextInt());
+                    break;
+                case 7:
+                    System.out.println("enter product name and new company name to update");
+                    productService.updateCompanyByProduct(sc.next(), sc.next());
                     break;
                 default:
-                    System.out.println("enter correct option!");
+                    System.out.println("please press the proper input as mentioned above.");
                     break;
             }
+            System.out.println("enter y to continue");
+            again= sc.next();
 
-            System.out.println("do you want to continue. press y");
-             op= sc.next();
-        }while (op.equals("y")) ;
-
-
-
+        }while (again.equals("y"));
+        System.out.println("thank you!!!!!!!!!!!");
     }
 }
