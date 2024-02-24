@@ -21,7 +21,7 @@ public class AnagramsCheckingProgram{
         if (check){
             System.out.println(firstWord+" and "+secondWord+" are anagrams");
         }else {
-            System.out.println(firstWord+" and "+secondWord+" are anagrams");
+            System.out.println(firstWord+" and "+secondWord+" are not anagrams");
         }
     }
     public static void main(String[] args) {
